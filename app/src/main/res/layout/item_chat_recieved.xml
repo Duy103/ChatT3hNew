@@ -1,0 +1,32 @@
+<!-- item_message.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_chat2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    android:padding="@dimen/dm5dp">
+
+    <TextView
+        android:id="@+id/textMessageRecieve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_received_message"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        android:text="Hi! T3H"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8"/>
+
+    <TextView
+        android:id="@+id/textDateTimeRecieve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dm5dp"
+        android:textColor="@color/item2Color"
+        android:text="12:30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textMessageRecieve"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

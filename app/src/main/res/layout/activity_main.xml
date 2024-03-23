@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/backGroundMain">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ln1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/avt"
+            android:scaleType="centerCrop"
+            android:background="@drawable/shape_avatar"/>
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_marginLeft="@dimen/dm5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/avt"
+            android:scaleType="centerCrop"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ln2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Martina Wolna"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_regular"
+            android:text="Maciej Kowalski"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextName"
+            tools:ignore="TextSizeCheck" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/shape_search"
+        android:fontFamily="@font/nunito_regular"
+        android:hint="Write"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingHorizontal="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img4"
+        app:layout_constraintStart_toStartOf="@id/ln1" />
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/edit"
+        app:layout_constraintEnd_toEndOf="@id/edit"
+        app:layout_constraintTop_toTopOf="@id/edit"
+        android:src="@drawable/write1"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/write2"
+        app:layout_constraintEnd_toEndOf="@+id/ln2"
+        app:layout_constraintBottom_toBottomOf="@id/edit"
+        app:layout_constraintTop_toTopOf="@id/edit" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:stackFromEnd="true"
+        app:layout_constraintTop_toBottomOf="@+id/ln1"
+        app:layout_constraintBottom_toTopOf="@+id/edit"
+        app:layout_constraintStart_toStartOf="@id/ln1"
+        app:layout_constraintEnd_toEndOf="@id/ln2"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
